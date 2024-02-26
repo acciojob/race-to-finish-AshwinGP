@@ -1,4 +1,3 @@
-window.promises = [];
 
 // Do not change the code above this
 // add your promises to the array `promises`
@@ -27,8 +26,9 @@ let promise5=new Promise((resolve,reject)=>{
 		resolve("promsie5")
 	},Math.floor(Math.random()*5)+1000)
 })
+window.promises = [promise1,promise2,promise3,promise4,promise5];
 
- promises=[promise1,promise2,promise3,promise4,promise5]
+// const myarr=[promise1,promise2,promise3,promise4,promise5]
 
-Promise.any(myarr).then((res)=>document.getElementById("output").innerHTML=res);
+Promise.any(window.promises ).then((res)=>document.getElementById("output").innerHTML=res);
 
