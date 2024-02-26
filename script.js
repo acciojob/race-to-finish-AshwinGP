@@ -28,7 +28,7 @@ let promise5=new Promise((resolve,reject)=>{
 	},Math.floor(Math.random()*5)+1000)
 })
 
-const myarr=[promise1,promise2,promise3,promise4,promise5]
+ promises=[promise1,promise2,promise3,promise4,promise5]
 
 Promise.any(myarr).then((res)=>document.getElementById("output").innerHTML=res);
 
